@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasilingam | HackerOS Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-black text-green-400 font-mono">
+    
+
+  <div class="min-h-screen flex items-center justify-center">
+    <div id="terminal" class="p-6 w-full max-w-4xl bg-black shadow-lg rounded">
+      <pre id="typedText" class="text-green-400 text-sm whitespace-pre-wrap leading-6"></pre>
+    </div>
+  </div>
+
+  <div class="text-center my-4">
+    <button class="btn btn-outline-success glow-btn" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Me</button>
+  </div>
+  <pre id="typedText" class="text-green-400 text-sm whitespace-pre-wrap leading-6 max-h-[80vh] overflow-y-auto"></pre>
+
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-4">
+        <div class="modal-header border-bottom border-green-500">
+          <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label>Name</label>
+              <input type="text" class="form-control glow-input text-green-500 bg-black border border-green-500" required />
+            </div>
+            <div class="mb-3">
+              <label>Email</label>
+              <input type="email" class="form-control glow-input text-green-500 bg-black border border-green-500" required />
+            </div>
+            <div class="mb-3">
+              <label>Message</label>
+              <textarea class="form-control glow-input text-green-500 bg-black border border-green-500" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-success glow-btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
