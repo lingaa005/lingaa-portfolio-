@@ -1,0 +1,57 @@
+
+body {
+  cursor: default;
+}
+
+#typedText::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.glow-input {
+  color: #00ff00; /* Make text green by default */
+  background-color: black;
+  border: 1px solid #00ff00;
+}
+
+.glow-input::placeholder {
+  color: #00ff00;
+  opacity: 0.6;
+}
+
+.glow-input:focus {
+  color: #00ff00;
+  background-color: black;
+  box-shadow: 0 0 5px 2px #00ff00;
+  border-color: #00ff00;
+  outline: none;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.modal-content {
+  background-color: black;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+#loading-screen {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  background-color: black;
+  color: #00ff00;
+  z-index: 1000;
+}
+#typedText {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+#typedText::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Opera */
+}
